@@ -1,6 +1,3 @@
-// const words = "Sample Case";
-// const words2 = "Next Case";
-
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -21,6 +18,7 @@ const sortChar = (params) => {
   letters.forEach((i) => {
     vowelsArr.includes(i) ? vowels.push(i) : consonants.push(i);
   });
+  vowels.sort((a, b) => (a < b ? -1 : 1));
   console.log(`Vowels: ${vowels.join(",")}`);
   console.log(`Consonants: ${consonants.join(",")}`);
 };
